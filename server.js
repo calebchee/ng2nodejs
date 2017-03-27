@@ -29,9 +29,9 @@ app.set('superSecret', config.secret); // secret variable
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'src')));
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'));
+  res.sendFile(path.join(__dirname, './index.html'));
 });
 
 // Set our api routes
